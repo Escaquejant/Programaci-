@@ -53,7 +53,7 @@ int processa(vector <ll> &v, ll resp, vector<string> &vs) {
                         ss << v0[j] << " " << oper << " " << v0[i] << " = " << dada  ;
                         vs[vs.size()-1]=ss.str();
                         if (dada==resp) return 1;
-                        if (vv.size()>2)
+                        if (vv.size()>=2)
                             if (processa(vv,resp,vs)) return 1;
                         
                     }
@@ -84,7 +84,7 @@ void fesho0() {
         cout << "(";
         ffor(kk,0,v.size())
             cout << " " << v[kk] << " ";
-        cout << ")" << endl;
+        cout << "-> " << resp << " )" << endl;
 
         ffor(i,0,vs.size()) {
             cout << vs[i] << endl;
